@@ -1,0 +1,47 @@
+A short instruction
+Works with
+Webiopi 0.7.0
+RPi Cam Web Interface http://www.raspberrypi.org/forums/viewtopic.php?f=43&t=63276&sid=41a3ead97da35a156cf1fe9f767a8b9a version 14-5-2014
+
+In the Webiopi config file add the location of the html folder and python script folder
+sudo nano /etc/webiopi/config
+[scripts]
+myproject = /home/pi/robot/python/script.py
+
+and in 
+[HTTP]
+doc-root = /home/pi/robot/html
+
+In my case, I have to flip the camera horizontal and vertical
+Change the file
+
+sudo nano /etc/raspimjpeg
+-> Find 
+hflip false
+vflip false
+
+and change to
+hflip true
+vflip true
+
+I needed to change the preview folder to a subfolder of my html folder
+add # in front of 
+preview_path /dev/shm/mjpeg/cam.jpg
+
+and at 
+preview_path /home/pi/robot/html/stream/cam.jpg
+
+In the index html file add
+<div><img id="mjpeg_dest" src="stream/cam.jpg"></div>
+
+and add a custom css file and js file
+<script type="text/javascript" src="js/robot.js"></script>
+<link rel="stylesheet" type="text/css" href="css/robot.css">
+
+in robot js add 
+//Refresh the raspberry pi camera picture every 40ms =25fps
+				setInterval(function(){
+							$("#mjpeg_dest").attr("src", "stream/cam.jpg?"+new Date().getTime());
+							},100);
+to reload the picture every 100ms, find the best time to suit your needs
+		

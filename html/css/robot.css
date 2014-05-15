@@ -1,0 +1,17 @@
+button {
+                        display: block;
+                        margin: 5px 5px 5px 5px;
+                        width: 160px;
+                        height: 45px;
+                        font-size: 24pt;
+                        font-weight: bold;
+                        color: white;
+                }
+                
+                #gpio17.LOW {
+                        background-color: Black;
+                }
+                
+                #gpio17.HIGH {
+                        background-color: Blue;
+                }
