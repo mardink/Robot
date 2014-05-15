@@ -85,3 +85,13 @@ def tilt_down():
 def tilt_neutral():
     cmd = 'echo 6=150 > /dev/servoblaster'
     os.system(cmd)
+
+@webiopi.macro	
+def reboot():
+    cmd = 'sudo reboot'
+    os.system(cmd)
+
+@webiopi.macro	
+def shutdown():
+    cmd = 'sudo shutdown -h now'
+    os.system(cmd)
