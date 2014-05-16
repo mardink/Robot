@@ -55,8 +55,8 @@ webiopi().ready(function() {
 							},100);
 
                 // Append the button to the controls box using a jQuery function
-				$("#TiltButtons").append(shutdownButton);
-				$("#TiltButtons").append(rebootButton);
+				//$("#TiltButtons").append(shutdownButton);
+				//$("#TiltButtons").append(rebootButton);
 				$("#TiltButtons").append(tiltupButton);
 				$("#TiltButtons").append(tiltneutralButton);
 				$("#TiltButtons").append(tiltdownButton);
@@ -64,11 +64,11 @@ webiopi().ready(function() {
 				$("#PanNeutralButton").append(panneutralButton);
 				$("#PanRightButton").append(panrightButton);
 				$("#Panleft").attr("class", "btn btn-success");
-				$("#Panneutral").attr("class", "btn btn-primary btn-xs");
-				$("#Panright").attr("class", "btn btn-success btn-xs");
-				$("#Tiltup").attr("class", "btn btn-success btn-xs");
-				$("#Tiltneutral").attr("class", "btn btn-primary btn-xs");
-				$("#Tiltdown").attr("class", "btn btn-success btn-xs");
+				$("#Panneutral").attr("class", "btn btn-primary");
+				$("#Panright").attr("class", "btn btn-success");
+				$("#Tiltup").attr("class", "btn btn-success");
+				$("#Tiltneutral").attr("class", "btn btn-primary");
+				$("#Tiltdown").attr("class", "btn btn-success");
 
                 // Refresh GPIO buttons
                 // pass true to refresh repeatedly of false to refresh once

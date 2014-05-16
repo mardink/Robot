@@ -1,11 +1,7 @@
-button {
-                        display: block;
-                        margin: 5px 5px 5px 5px;
-                        width: 100px;
-                        height: 20px;
-                        font-size: 24pt;
-                        font-weight: bold;
-                        color: white;
-                }
-                
-                
+#mjpeg_dest {
+				margin-bottom: 10px;
+			}
+
+#stream {
+				height: 320px;
+		}
