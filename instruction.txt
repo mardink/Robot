@@ -47,4 +47,6 @@ to reload the picture every 100ms, find the best time to suit your needs
 
 MAybe edit  /usr/share/webiopi/htdocs
 webiopi.js to remove google analytics and the webiopi.css
+
+ServoBlaster change the config so only the actual servo ports
 		
