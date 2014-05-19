@@ -36,6 +36,57 @@ webiopi().ready(function() {
                     // Call the macro
                     webiopi().callMacro("tilt_down");
                 });
+				
+				// Functions for driving
+				// Create a button to call ForwardLeft macro
+                var ForwardLeftButton = webiopi().createButton("Forwardleft", "Left", function() {
+                   
+                    // Call the macro
+                    webiopi().callMacro("Forward_left");
+                });
+				
+				// Create a button to call forward macro
+                var ForwardButton = webiopi().createButton("Forward", "Forward", function() {
+                   
+                    // Call the macro
+                    webiopi().callMacro("Forward");
+                });
+				
+				// Create a button to call forwardRight macro
+                var ForwardRightButton = webiopi().createButton("Forwardright", "Right", function() {
+                   
+                    // Call the macro
+                    webiopi().callMacro("Forward_right");
+                });
+				// Create a button to call forwardRight macro
+                var StopButton = webiopi().createButton("Stop", "Stop", function() {
+                   
+                    // Call the macro
+                    webiopi().callMacro("Stop");
+                });
+				
+				// Create a button to call BackwardLeft macro
+                var BackwardLeftButton = webiopi().createButton("Backwardleft", "Left", function() {
+                   
+                    // Call the macro
+                    webiopi().callMacro("Backwards_left");
+                });
+				
+				// Create a button to call forward macro
+                var BackwardButton = webiopi().createButton("Backward", "Backward", function() {
+                   
+                    // Call the macro
+                    webiopi().callMacro("Backwards");
+                });
+				
+				// Create a button to call forwardRight macro
+                var BackwardRightButton = webiopi().createButton("Backwardright", "Right", function() {
+                   
+                    // Call the macro
+                    webiopi().callMacro("Backwards_right");
+                });
+				
+				//System Fucntions
 				// Create a button to call Reboot macro
                 var rebootButton = webiopi().createButton("Reboot", "Reboot", function() {
                    
@@ -49,7 +100,7 @@ webiopi().ready(function() {
                     webiopi().callMacro("shutdown");
                 });
 				
-				//Refresh the raspberry pi camera picture every 40ms =25fps
+				//Refresh the raspberry pi camera picture every 100ms 
 				setInterval(function(){
 							$("#mjpeg_dest").attr("src", "stream/cam.jpg?"+new Date().getTime());
 							},100);
@@ -69,6 +120,13 @@ webiopi().ready(function() {
 				$("#Tiltup").attr("class", "btn btn-success");
 				$("#Tiltneutral").attr("class", "btn btn-primary");
 				$("#Tiltdown").attr("class", "btn btn-success");
+				$("#ForwardButton").attr("class", "btn btn-success");
+				$("#ForwardLeftButton").attr("class", "btn btn-success");
+				$("#ForwardRightButton").attr("class", "btn btn-success");
+				$("#BackwardButton").attr("class", "btn btn-success");
+				$("#BackwardLeftButton").attr("class", "btn btn-success");
+				$("#BackwardRightButton").attr("class", "btn btn-success");
+				$("#StopButton").attr("class", "btn btn-danger");
 
                 // Refresh GPIO buttons
                 // pass true to refresh repeatedly of false to refresh once
