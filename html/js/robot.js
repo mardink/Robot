@@ -111,9 +111,16 @@ webiopi().ready(function() {
 				$("#TiltButtons").append(tiltupButton);
 				$("#TiltButtons").append(tiltneutralButton);
 				$("#TiltButtons").append(tiltdownButton);
-                $("#PanLeftButton").append(panleftButton);
+                		$("#PanLeftButton").append(panleftButton);
 				$("#PanNeutralButton").append(panneutralButton);
 				$("#PanRightButton").append(panrightButton);
+				$("#ForwardButton").append(ForwardButton);
+				$("#ForwardLeftButton").append(ForwardLeftButton);
+				$("#ForwardRightButton").append(ForwardRightButton);
+				$("#BackwardButton").append(BackwardButton);
+				$("#BackwardLeftButton").append(BackwardLeftButton);
+				$("#BackwardRightButton").append(BackwardRightButton);
+				$("#StopButton").append(StopButton);
 				$("#Panleft").attr("class", "btn btn-success");
 				$("#Panneutral").attr("class", "btn btn-primary");
 				$("#Panright").attr("class", "btn btn-success");
